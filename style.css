@@ -1,0 +1,376 @@
+/* Base Styles */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    color: white;
+    background-color: #1e1e1e;
+    padding: 60px 20px;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+   
+header p {
+    font-size: 1.2rem;
+}
+
+nav {
+    background:   #444;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    
+}
+
+nav ul li a:hover {
+    background: #555;
+    border-radius: 5px;
+}
+/*  Menu for Mobile */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        display: none; /* Hide the menu by default */
+        width: 100%;
+    }
+    
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block; /* Show the  menu */
+    }
+
+    nav ul.active {
+        display: flex; /* Show the menu when active */
+    }
+}
+
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none; /* Hide the menu on larger screens */
+    }
+}
+
+/* Optional: Hover effect for the  menu */
+.menu-toggle:hover {
+    color: #ccc;
+}
+/* Checkbox Hack for toggling the menu */
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked ~ ul {
+    display: flex;
+}
+
+
+main {
+    padding: 20px;
+}
+.intro1{
+    height: 100px;
+    width: 100px;
+    background-color: pink;
+    border: 2px;
+    text-align: left;
+}
+
+
+/* Section Styles */
+section {
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 1100px;
+    background: rgb(255, 208, 208);
+    box-shadow: 20px 20px 20px rgb(43, 39, 39);
+    border-radius: 10px;
+}
+
+section h2 {
+    border-bottom: 2px solid #151314;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.welcome{
+    background-color:rgb(168, 118, 118);
+    text-align: center;
+    padding: 2px;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px
+    
+}
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    
+}
+.about {
+    background-color:rgb(168, 118, 118);
+    text-align: center;
+    padding: 2px;
+}
+.recipe{
+    background-color:rgb(168, 118, 118);
+    text-align: center;
+    padding: 2px;
+}
+
+.image-text-block {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+
+    .image-container {
+        display: flex; /* Ensures flexbox is used */
+        justify-content: center; /* Centers the content horizontally */
+        align-items: center; /* Centers the content vertically */
+        flex: 1;
+        min-width: 100px; /* Corrected to ensure it has a unit */
+        max-width: 600px; /* Increased the maximum width */
+        margin: 2px auto; /* Centers the container if it's within a larger container */
+    }
+    
+    .responsive-image {
+        width: 100%; /* Makes the image take up 100% of the container's width */
+        height: auto; /* Maintains the aspect ratio */
+        max-width: 100%; /* Ensures the image does not exceed the container's width */
+        max-height: 600px; /* Set a larger maximum height */
+    }
+   
+
+.recipe-link{
+    background-color: yellow;
+    color: blue;
+}
+
+
+h3{
+    background-color: #444;
+    color:white;
+    text-align: center;
+  
+}
+h4{ 
+    text-align: start;
+    color:white;
+    font-weight: bolder;
+    
+
+    
+}
+span{
+    background-color: #333;
+    padding: 5px;
+    text-align: center;
+}
+
+section p, section ul {
+    margin-bottom: 20px;
+}
+
+section ul {
+    padding-left: 20px;
+}
+
+section ul li {
+    margin-bottom: 10px;
+}
+
+/* Article Styles */
+article {
+    margin-bottom: 20px;
+}
+.text-container {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    min-width: 300px; /* Ensure the text container does not get too small */
+}
+
+.img{
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    width: 350;
+    height: 250;
+    
+}
+#west-indian {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+}
+h4{
+    text-align: center;
+}
+
+.recipe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px;
+}
+
+.recipe-item {
+    
+    text-align: center;
+}
+.media {
+    width: 700px; /* Set the width */
+    height: auto; /* Set the height */
+    transition: transform 0.3s ease-in-out;
+    border-radius: 8px;
+}
+
+.media:hover {
+    transform: scale(1.05);}
+
+.img, iframe {
+    transition: transform 0.3s ease-in-out;
+    width: 300px;
+    height: 250px;
+}
+
+.img:hover, iframe:hover {
+    transform: scale(1.05);
+}
+
+.recipe-link {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+iframe {
+   border: 2px solid #ddd;
+   border-radius: 8px;
+   transition: transform 0.3s ease;
+
+}
+
+
+.iframe-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 315;
+    width: 100%;
+}
+
+iframe {
+    width: 560px;; 
+    height: 315px; 
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+}
+
+/* Contact Form Styles */
+form {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background: #ff6347;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #e55337;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 10px;
+    }
+}
